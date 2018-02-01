@@ -1,0 +1,44 @@
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+    autocmd BufWritePost */.vim/** source $MYVIMRC
+augroup END
+
+augroup git_commit_message
+    autocmd!
+    autocmd BufReadPre */COMMIT_EDITMSG setlocal spell spelllang=en_us
+                \| setlocal textwidth=0
+                \| startinsert!
+augroup END
+
+augroup golang
+    autocmd!
+    autocmd FileType go setlocal noexpandtab textwidth=150
+                \| iabbrev ppr fmt.Printf("%#v\n",)<Left>
+                \| noremap <buffer> <leader>t :GoTest<CR>
+                \| noremap <buffer> <leader>b :GoBuild<CR>
+augroup END
+
+augroup javascript
+    autocmd!
+    autocmd FileType javascript setlocal textwidth=150 tabstop=2 shiftwidth=2
+                \| iabbrev <buffer> cl console.log
+augroup END
+
+augroup markdown
+    autocmd!
+    autocmd FileType markdown setlocal spell textwidth=80 formatoptions+=t
+augroup END
+
+augroup textwidth_per_filetype
+    autocmd!
+    autocmd FileType vim             setlocal textwidth=150
+    autocmd FileType sh              setlocal textwidth=150
+    autocmd FileType java            setlocal textwidth=120
+    autocmd FileType scss            setlocal textwidth=150 tabstop=2 shiftwidth=2
+    autocmd FileType html.handlebars setlocal textwidth=150 tabstop=2 shiftwidth=2
+    autocmd FileType ruby            setlocal textwidth=150 tabstop=2 shiftwidth=2
+    autocmd FileType dockerfile      setlocal textwidth=80  noexpandtab
+augroup END
+
+" vim: ft=vim

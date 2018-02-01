@@ -1,0 +1,41 @@
+[alias]
+	st = status
+	aa = add -A
+	ci = commit -v
+	co = checkout
+	cl = clean
+	cm = commit
+	pr = pull --rebase --prune
+	dm = !git branch --no-color --merged | grep -vE '^(\\*|\\s*(master|develop|dev)\\s*$)' | xargs -n 1 git branch -d
+    ls = log --pretty=format:'%C(yellow)%h%Cred%d %Creset%s %Cgreen(%cr) %Cblue[%cn]' --decorate
+	ll = !git ls --numstat
+[user]
+	email = erickpintor@gmail.com
+	name = Erick Pintor
+[push]
+	default = upstream
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+[merge]
+	tool = vimdiff
+[url "https://"]
+	insteadOf = git://
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22

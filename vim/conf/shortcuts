@@ -1,0 +1,36 @@
+let g:mapleader=" "
+let g:maplocalleader="\\"
+set pastetoggle=<F2>
+
+noremap               <Leader>ev                    :vsplit $MYVIMRC<CR>
+
+noremap               ]q                            :cn<CR>
+noremap               [q                            :cp<CR>
+noremap               ]f                            :cnfile<CR>
+noremap               [f                            :cpfile<CR>
+noremap               ]b                            :bn<CR>
+noremap               [b                            :bp<CR>
+
+noremap               <Leader>y                     "+y
+noremap               <Leader>p                     "+p
+noremap               <Leader>P                     "+P
+
+noremap               <Leader>o                     m`o<Esc>``
+noremap               <Leader>O                     m`O<Esc>``
+
+nnoremap              Q                             @q
+vnoremap              Q                             :norm @q<CR>
+
+noremap               <F4>                          :NERDTreeToggle<CR>
+noremap               <F12>                         :SyntasticToggleMode<CR>
+
+noremap               <Leader>l                     :set list!<CR>
+noremap               <Leader>h                     :set hlsearch!<CR>
+noremap               <silent><C-n>                 :call search_pulse#Pulse()<CR>
+
+noremap               <Leader>W                     :%s/\v\s+$//<CR>
+noremap               <Leader>w                     :set wrap!<CR>
+noremap               <Leader>C                     :!ctags -R .<CR>
+noremap               <Leader>x                     :Explore<CR>
+
+" vim: ft=vim

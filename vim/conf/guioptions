@@ -1,0 +1,11 @@
+set t_Co=256
+set background=dark
+set listchars=tab:\|\ ,eol:¬,extends:❯,precedes:❮,trail:⌴
+set showbreak=↪\ 
+set colorcolumn=+1
+
+let g:airline_theme='monochrome'
+
+silent! colorscheme PaperColor
+
+" vim: ft=vim

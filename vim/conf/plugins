@@ -1,0 +1,46 @@
+let s:pluginDir = $HOME . '/.vim/plugged'
+
+call plug#begin(s:pluginDir)
+
+" Foundation
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/Syntastic'
+Plug 'vim-scripts/repeat.vim'
+Plug 'vim-scripts/CmdlineComplete'
+Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
+Plug 'mateusbraga/vim-spell-pt-br'
+
+" File navigation
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTree', 'NERDTreeToggle' ] }
+Plug 'rking/ag.vim', { 'on': 'Ag' }
+
+" UI
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'inside/vim-search-pulse'
+
+" Languages
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+Plug 'tfnico/vim-gradle', { 'for': 'groovy' }
+Plug 'idris-hackers/idris-vim', { 'for': 'idris' }
+Plug 'mustache/vim-mustache-handlebars', { 'for': 'html.handlebars' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'vim-scripts/haskell.vim', { 'for': 'haskell' }
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'keith/swift.vim', { 'for': 'swift' }
+
+
+call plug#end()
+
+if !isdirectory(s:pluginDir)
+  autocmd VimEnter * PlugInstall
+              \| source $MYVIMRC
+endif
+
+" vim: ft=vim

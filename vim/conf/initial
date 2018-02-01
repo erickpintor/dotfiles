@@ -1,0 +1,55 @@
+syntax enable
+
+set nocompatible
+set hidden
+set number
+set incsearch
+set smartcase
+set ignorecase
+set smartindent
+set autoindent
+set linebreak
+set showmatch
+set showcmd
+set nobackup
+set noswapfile
+set mousehide
+set wildmenu
+set ttyfast
+set lazyredraw
+set notimeout
+set ttimeout
+set noerrorbells
+set visualbell
+set expandtab
+set list
+
+set ttimeoutlen=5
+set complete=.,w,b,u,t
+set completeopt=longest,menuone,preview
+set wildmode=list:longest
+set encoding=utf-8
+set laststatus=2
+set tabstop=4
+set shiftwidth=4
+set sidescroll=1
+set t_vb=
+
+filetype indent plugin on
+
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:vim_search_pulse_mode = 'pattern'
+
+"Vim Go
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
+let g:syntastic_go_checkers = ['govet', 'errcheck']
+
+"Elm
+let g:elm_format_autosave = 1
+let g:elm_make_show_warnings = 1
+let g:elm_syntastic_show_warnings = 1
+
+" vim: ft=vim

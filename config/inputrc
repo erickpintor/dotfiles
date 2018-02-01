@@ -1,0 +1,5 @@
+set completion-ignore-case on
+set mark-symlinked-directories on
+set show-all-if-ambiguous on
+set page-completions off
+set bell-style none

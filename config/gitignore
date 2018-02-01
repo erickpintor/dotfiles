@@ -1,0 +1,12 @@
+*.iml
+*.ipr
+*.iws
+*.swp
+.idea/**
+**/out/
+.env
+.venv
+tags
+.ensime
+.ensime_cache/
+.ropeproject/
