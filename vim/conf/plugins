@@ -34,6 +34,7 @@ Plug 'elmcast/elm-vim', { 'for': 'elm' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'dag/vim-fish', { 'for': 'fish' }
 
 
 call plug#end()
