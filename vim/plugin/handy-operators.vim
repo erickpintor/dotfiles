@@ -11,7 +11,7 @@ function! s:AgOperator(type)
     silent set hlsearch
     let @/= '\C' . word
 
-    silent execute "Ag '" . shellescape(word) . "'"
+    silent execute "Ag " . shellescape(word)
     redraw
 endfunction
 " }}}
