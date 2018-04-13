@@ -2,6 +2,7 @@ augroup skeleton_per_filetype
     autocmd!
     autocmd BufNewFile *.java 0r $HOME/.vim/skeletons/java
     autocmd BufNewFile *.sh   0r $HOME/.vim/skeletons/sh
+    autocmd BufNewFile *.tex  0r $HOME/.vim/skeletons/tex
 augroup END
 
 " vim: ft=vim
