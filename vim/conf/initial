@@ -43,9 +43,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:vim_search_pulse_mode = 'pattern'
 
 "Vim Go
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:syntastic_go_checkers = ['govet', 'errcheck']
+let g:go_fmt_command = 'goimports'
 
 "Elm
 let g:elm_format_autosave = 1

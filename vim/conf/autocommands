@@ -15,7 +15,7 @@ augroup golang
     autocmd!
     autocmd FileType go setlocal noexpandtab textwidth=150
                 \| iabbrev ppr fmt.Printf("%#v\n",)<Left>
-                \| noremap <buffer> <leader>t :GoTest<CR>
+                \| noremap <buffer> <leader>t :GoTest!<CR>
                 \| noremap <buffer> <leader>b :GoBuild<CR>
 augroup END
 
