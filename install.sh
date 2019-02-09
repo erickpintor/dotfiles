@@ -7,10 +7,10 @@ ROOT="$HOME/.dotfiles"
 function main {
     git pull --rebase
 
+    folder "$HOME/.config/alacritty"
     folder "$HOME/.config/fish/functions"
     folder "$HOME/.ssh"
 
-    link "$ROOT/fish/functions/g.fish" "$HOME/.config/fish/functions/g.fish"
     link "$ROOT/vim"                   "$HOME/.vim"
     link "$ROOT/config/ctags"          "$HOME/.ctags"
     link "$ROOT/config/gitconfig"      "$HOME/.gitconfig"
@@ -19,6 +19,9 @@ function main {
     link "$ROOT/config/sbt_config"     "$HOME/.sbt_config"
     link "$ROOT/config/screenrc"       "$HOME/.screenrc"
     link "$ROOT/config/ssh_config"     "$HOME/.ssh/config"
+    link "$ROOT/config/tmux.conf"      "$HOME/.tmux.conf"
+    link "$ROOT/config/alacritty.yml"  "$HOME/.config/alacritty/alacritty.yml"
+    link "$ROOT/fish/functions/g.fish" "$HOME/.config/fish/functions/g.fish"
 
     echo "Everything installed!"
 }

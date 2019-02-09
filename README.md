@@ -1,5 +1,6 @@
 # My dotfiles
 
-- iTerm2
+- Alacritty
+- Tmux
 - Fish shell
 - Vim
