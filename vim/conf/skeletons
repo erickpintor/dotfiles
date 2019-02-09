@@ -4,6 +4,7 @@ augroup skeleton_per_filetype
     autocmd BufNewFile *.sh   0r $HOME/.vim/skeletons/sh
     autocmd BufNewFile *.py   0r $HOME/.vim/skeletons/py
     autocmd BufNewFile *.tex  0r $HOME/.vim/skeletons/tex
+    autocmd BufNewFile *.hdl  0r $HOME/.vim/skeletons/hdl
 augroup END
 
 " vim: ft=vim
