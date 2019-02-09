@@ -36,6 +36,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
+Plug 'jparise/vim-graphql', { 'for': 'graphql' }
 
 
 call plug#end()
