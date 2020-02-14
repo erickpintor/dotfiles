@@ -4,9 +4,9 @@ call plug#begin(s:pluginDir)
 
 " Foundation
 Plug 'vim-scripts/matchit.zip'
-Plug 'vim-scripts/Syntastic'
 Plug 'vim-scripts/repeat.vim'
 Plug 'vim-scripts/CmdlineComplete'
+Plug 'vim-syntastic/Syntastic'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'mateusbraga/vim-spell-pt-br'
