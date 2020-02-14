@@ -1,13 +1,9 @@
+Include ~/.ssh/private_config
+
 Host *
   ServerAliveInterval 100
+  AddKeysToAgent yes
 
 Host github.com
   Hostname ssh.github.com
   Port 443
-
-Host *.amazonaws.com
-  SendEnv AWS_ACCESS_KEY AWS_SECRET_KEY AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
-  ForwardAgent yes
-  ServerAliveInterval 60
-  StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
