@@ -45,6 +45,9 @@ let g:vim_search_pulse_mode = 'pattern'
 "Vim Go
 let g:go_fmt_command = 'goimports'
 
+"Rust
+let g:rustfmt_autosave = 1
+
 "Elm
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
