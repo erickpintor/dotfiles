@@ -1,14 +1,49 @@
-\documentclass{article}
+\documentclass[11pt,twocolumn]{article}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
-%\usepackage{sbc-template}
-\usepackage{graphicx}
-\usepackage{url}
-\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{authblk}
+%\usepackage{graphicx}
+%\usepackage{url}
+%\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+%\usepackage{listings}
+\usepackage[a4paper, margin=0.5in]{geometry}
 
-\title{Titulo}
-\author{Erick Pintor}
-%\address{Escola Politécnica -- Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)\\Porto Alegre -- RS -- Brasil}
+% Autores em português
+%\renewcommand*{\Authsep}{, }
+%\renewcommand*{\Authand}{ e }
+%\renewcommand*{\Authands}{ e }
+
+% Nome dos blocos de texto
+%\renewcommand{\lstlistingname}{Arquivo}
+
+% Exemplos
+
+%\lstinputlisting[caption=program.txt,label=verb:program]{program.txt}
+
+%\begin{lstlisting}
+%$ java -jar memsim.jar --help
+%\end{lstlisting}
+
+%\begin{table}
+%    \centering
+%    \begin{tabular}{|c|c|c|c|}
+%        \hline
+%        col1 & col2 & col3 \\
+%        \hline
+%    \end{tabular}
+%    \caption{Caption}
+%    \label{label}
+%\end{table}
+
+\title{{\textbf{Title} \\
+        \large Subtitle}}
+
+\author[1]{Erick Pintor}
+%\author[1]{Fulado de tal}
+
+\affil[1]{Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS) \par
+    Porto Alegre --- RS --- Brasil}
 
 \date{\today}
 
