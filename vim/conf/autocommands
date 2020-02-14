@@ -11,12 +11,25 @@ augroup git_commit_message
                 \| startinsert!
 augroup END
 
+augroup clang
+    autocmd!
+    autocmd FileType c,cpp setlocal textwidth=85
+        \| noremap <buffer> <leader>r :w<CR>:!gcc -o main % && ./main<CR>
+augroup END
+
 augroup golang
     autocmd!
-    autocmd FileType go setlocal noexpandtab textwidth=150
+    autocmd FileType go setlocal noexpandtab textwidth=80
                 \| iabbrev ppr fmt.Printf("%#v\n",)<Left>
                 \| noremap <buffer> <leader>t :GoTest!<CR>
+                \| noremap <buffer> <leader>r :GoRun<CR>
                 \| noremap <buffer> <leader>b :GoBuild<CR>
+augroup END
+
+augroup rust
+    autocmd!
+    autocmd FileType rust setlocal noexpandtab textwidth=80
+                \| noremap <buffer> <leader>r :RustRun<CR>
 augroup END
 
 augroup javascript
@@ -28,6 +41,12 @@ augroup END
 augroup markdown
     autocmd!
     autocmd FileType markdown setlocal spell textwidth=80 formatoptions+=t
+augroup END
+
+augroup tex
+    autocmd!
+    autocmd FileType tex setlocal spell textwidth=80 formatoptions+=t
+        \| noremap <buffer> <leader>b :!pdflatex %<CR>
 augroup END
 
 augroup textwidth_per_filetype
