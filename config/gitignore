@@ -10,3 +10,4 @@ tags
 .ensime
 .ensime_cache/
 .ropeproject/
+.DS_Store
