@@ -1,1 +1,1 @@
-SBT_OPTS="-Djava.net.preferIPv4Stack=true -Dhttp.connection.timeout=2 -Dhttp.connection-manager.timeout=2 -Dhttp.socket.timeout=6 -XX:+UseParallelGC -XX:ReservedCodeCacheSize=1G -XX:MaxPermSize=2G -XX:+CMSClassUnloadingEnabled -Xss200M -Xms256M -Xmx6G -server"
+SBT_OPTS="-Djava.net.preferIPv4Stack=true -Dhttp.connection.timeout=2 -Dhttp.connection-manager.timeout=2 -Dhttp.socket.timeout=6 -XX:+UseParallelGC -XX:ReservedCodeCacheSize=1G -XX:MaxMetaspaceSize=512m -XX:MaxPermSize=2G -XX:+CMSClassUnloadingEnabled -Xss200M -Xms256M -Xmx6G -server"
