@@ -7,7 +7,7 @@
 	cm = commit
 	pr = pull --rebase --prune
 	dm = !git branch --no-color --merged | grep -vE '^(\\*|\\s*(master|develop|dev)\\s*$)' | xargs -n 1 git branch -d
-    ls = log --pretty=format:'%C(yellow)%h%Cred%d %Creset%s %Cgreen(%cr) %Cblue[%cn]' --decorate
+    ls = log --pretty=format:'%C(yellow)%h%Cred%d %Creset%s %Cgreen(%cd) %Cblue[%cn]' --date=short --decorate
 	ll = !git ls --numstat
 [user]
 	email = erickpintor@gmail.com
@@ -39,3 +39,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[absorb]
+	maxStack=50
