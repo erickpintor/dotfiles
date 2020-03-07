@@ -38,12 +38,6 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'jparise/vim-graphql', { 'for': 'graphql' }
 
-" Language servers support
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ 'for': 'rust',
-    \ }
 
 call plug#end()
 

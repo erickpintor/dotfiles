@@ -36,9 +36,4 @@ noremap               <Leader>x                     :Explore<CR>
 noremap               <Leader>fo                    :CtrlSFToggle<CR>
 nmap                  <Leader>ff                    <Plug>CtrlSFPrompt
 
-nnoremap              <Leader>gg                    :call LanguageClient_contextMenu()<CR>
-nnoremap              <Leader>gh                    :call LanguageClient_textDocument_hover()<CR>
-nnoremap              <Leader>gd                    :call LanguageClient_textDocument_definition()<CR>
-nnoremap              <Leader>gr                    :call LanguageClient_textDocument_rename()<CR>
-
 " vim: ft=vim

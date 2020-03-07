@@ -55,9 +55,4 @@ let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
 let g:elm_syntastic_show_warnings = 1
 
-" Language servers support
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ }
-
 " vim: ft=vim
