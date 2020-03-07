@@ -1,8 +1,8 @@
-" Ag {{{
-noremap  <Leader>a :set operatorfunc=<SID>AgOperator<CR>g@
-vnoremap <Leader>a :<C-u>call <SID>AgOperator(visualmode())<CR>
+" CtrlSF Helper {{{
+noremap  <Leader>a :set operatorfunc=<SID>CtrlSFOperator<CR>g@
+vnoremap <Leader>a :<C-u>call <SID>CtrlSFOperator(visualmode())<CR>
 
-function! s:AgOperator(type)
+function! s:CtrlSFOperator(type)
     let word = <SID>GetWord(a:type)
     if word == ''
         return
@@ -11,7 +11,7 @@ function! s:AgOperator(type)
     silent set hlsearch
     let @/= '\C' . word
 
-    silent execute "Ag " . shellescape(word)
+    silent execute "CtrlSF " . shellescape(word)
     redraw
 endfunction
 " }}}

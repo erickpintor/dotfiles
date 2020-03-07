@@ -13,8 +13,8 @@ Plug 'mateusbraga/vim-spell-pt-br'
 
 " File navigation
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dyng/ctrlsf.vim'
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTree', 'NERDTreeToggle' ] }
-Plug 'rking/ag.vim', { 'on': 'Ag' }
 
 " UI
 Plug 'NLKNguyen/papercolor-theme'
