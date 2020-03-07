@@ -30,6 +30,9 @@ augroup rust
     autocmd!
     autocmd FileType rust setlocal noexpandtab textwidth=80
                 \| noremap <buffer> <leader>r :RustRun<CR>
+                \| noremap <buffer> <leader>t :belowright :RustTest<CR>
+                \| noremap <buffer> <leader>T :belowright :RustTest!<CR>
+                \| noremap <buffer> <leader>H :belowright :Cargo clippy<CR>
 augroup END
 
 augroup javascript
