@@ -23,6 +23,7 @@ vnoremap              Q                             :norm @q<CR>
 
 noremap               <F4>                          :NERDTreeToggle<CR>
 noremap               <F12>                         :SyntasticToggleMode<CR>
+noremap               <F5>                          <C-w>o<C-w>v<C-w>v:enew<CR><C-w>l<C-w>l:enew<CR><C-w>h
 
 noremap               <Leader>l                     :set list!<CR>
 noremap               <Leader>h                     :set hlsearch!<CR>

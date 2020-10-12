@@ -7,6 +7,7 @@
 %\usepackage{url}
 %\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
 %\usepackage{listings}
+%\usepackage{amsmath}
 \usepackage[a4paper, margin=0.5in]{geometry}
 
 % Autores em português
@@ -17,14 +18,15 @@
 % Nome dos blocos de texto
 %\renewcommand{\lstlistingname}{Arquivo}
 
-% Exemplos
-
+% Blocks de codigo via arquivo
 %\lstinputlisting[caption=program.txt,label=verb:program]{program.txt}
 
+% Blocks de código inline
 %\begin{lstlisting}
 %$ java -jar memsim.jar --help
 %\end{lstlisting}
 
+% Tabelas
 %\begin{table}
 %    \centering
 %    \begin{tabular}{|c|c|c|c|}
@@ -35,6 +37,22 @@
 %    \caption{Caption}
 %    \label{label}
 %\end{table}
+
+% Listas
+%\begin{enumerate}
+%    \item foo
+%\end{enumerate}
+
+%\begin{itemize}
+%    \item foo
+%\end{itemize}
+
+% Frações
+%\frac{1}{2}
+%\cfrac{1}{2}
+%\dfrac{1}{2}
+
+% ----------------------------------------------------------------
 
 \title{{\textbf{Title} \\
         \large Subtitle}}

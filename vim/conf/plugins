@@ -37,7 +37,10 @@ Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'jparise/vim-graphql', { 'for': 'graphql' }
+Plug 'mlr-msft/vim-loves-dafny', { 'for': 'dafny'}
 
+" Icons must be loaded last
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

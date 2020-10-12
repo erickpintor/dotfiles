@@ -13,8 +13,15 @@ augroup END
 
 augroup clang
     autocmd!
-    autocmd FileType c,cpp setlocal textwidth=85
+    autocmd FileType c setlocal textwidth=85
+        \| noremap <buffer> <leader>R :w<CR>:!gcc -o main *.c -I. && ./main<CR>
         \| noremap <buffer> <leader>r :w<CR>:!gcc -o main % && ./main<CR>
+augroup END
+
+augroup cpp
+    autocmd!
+    autocmd FileType cpp setlocal textwidth=85
+        \| noremap <buffer> <leader>r :w<CR>:!g++ -o main % && ./main<CR>
 augroup END
 
 augroup golang
@@ -28,17 +35,30 @@ augroup END
 
 augroup rust
     autocmd!
-    autocmd FileType rust setlocal noexpandtab textwidth=80
+    autocmd FileType rust setlocal textwidth=80
                 \| noremap <buffer> <leader>r :Cargo run<CR>
                 \| noremap <buffer> <leader>t :belowright :RustTest<CR>
                 \| noremap <buffer> <leader>T :belowright :RustTest!<CR>
                 \| noremap <buffer> <leader>H :belowright :Cargo clippy<CR>
 augroup END
 
+augroup dafny
+    autocmd!
+    autocmd FileType dafny setlocal textwidth=80
+                \| noremap <buffer> <leader>b :!dafny /out:main.exe %<CR>
+                \| noremap <buffer> <leader>r :!mono main.exe<CR>
+augroup END
+
 augroup javascript
     autocmd!
-    autocmd FileType javascript setlocal textwidth=150 tabstop=2 shiftwidth=2
+    autocmd FileType javascript setlocal textwidth=80 tabstop=2 shiftwidth=2
                 \| iabbrev <buffer> cl console.log
+augroup END
+
+augroup python
+    autocmd!
+    autocmd FileType python setlocal textwidth=80 tabstop=4 shiftwidth=4
+                \| noremap <buffer> <leader>r :w<CR>:!python3 %<CR>
 augroup END
 
 augroup markdown
@@ -49,7 +69,7 @@ augroup END
 augroup tex
     autocmd!
     autocmd FileType tex setlocal spell textwidth=80 formatoptions+=t
-        \| noremap <buffer> <leader>b :!pdflatex %<CR>
+        \| noremap <buffer> <leader>b :w<CR>:!pdflatex %<CR>
 augroup END
 
 augroup textwidth_per_filetype
