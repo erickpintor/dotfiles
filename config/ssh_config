@@ -1,9 +1,5 @@
 Include ~/.ssh/private_config
 
 Host *
-  ServerAliveInterval 100
   AddKeysToAgent yes
-
-Host github.com
-  Hostname ssh.github.com
-  Port 443
+  ServerAliveInterval 100
