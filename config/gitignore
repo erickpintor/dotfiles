@@ -11,3 +11,6 @@ tags
 .ensime_cache/
 .ropeproject/
 .DS_Store
+.metals/
+.bloop/
+metals.sbt
