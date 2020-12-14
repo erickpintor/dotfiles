@@ -35,7 +35,7 @@ noremap               <Leader>w                     :set wrap!<CR>
 noremap               <Leader>C                     :!ctags -R .<CR>
 noremap               <Leader>x                     :Explore<CR>
 
-noremap               <Leader>fo                    :CtrlSFToggle<CR>
-nmap                  <Leader>ff                    <Plug>CtrlSFPrompt
+noremap               <Leader>ao                    :CtrlSFToggle<CR>
+nmap                  <Leader>aa                    <Plug>CtrlSFPrompt
 
 " vim: ft=vim
