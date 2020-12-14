@@ -52,5 +52,6 @@ let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
 let g:elm_syntastic_show_warnings = 1
 let g:syntastic_dafny_checkers = ['dafny']
+let g:scala_scaladoc_indent = 1
 
 " vim: ft=vim
