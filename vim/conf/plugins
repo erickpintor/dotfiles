@@ -24,20 +24,12 @@ Plug 'inside/vim-search-pulse'
 
 " Languages
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-Plug 'tfnico/vim-gradle', { 'for': 'groovy' }
-Plug 'idris-hackers/idris-vim', { 'for': 'idris' }
-Plug 'mustache/vim-mustache-handlebars', { 'for': 'html.handlebars' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
-Plug 'vim-scripts/haskell.vim', { 'for': 'haskell' }
-Plug 'elmcast/elm-vim', { 'for': 'elm' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'jparise/vim-graphql', { 'for': 'graphql' }
-Plug 'mlr-msft/vim-loves-dafny', { 'for': 'dafny'}
 
 " Icons must be loaded last
 Plug 'ryanoasis/vim-devicons'
