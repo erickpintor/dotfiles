@@ -6,9 +6,7 @@ call plug#begin(s:pluginDir)
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/repeat.vim'
 Plug 'vim-scripts/CmdlineComplete'
-Plug 'vim-syntastic/Syntastic'
 Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
 Plug 'mateusbraga/vim-spell-pt-br'
 
 " File navigation
@@ -22,14 +20,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'inside/vim-search-pulse'
 
-" Languages
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'dag/vim-fish', { 'for': 'fish' }
-Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'jparise/vim-graphql', { 'for': 'graphql' }
+" LSP support
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Icons must be loaded last
 Plug 'ryanoasis/vim-devicons'

@@ -11,67 +11,6 @@ augroup git_commit_message
                 \| startinsert!
 augroup END
 
-augroup clang
-    autocmd!
-    autocmd FileType c setlocal textwidth=85
-        \| noremap <buffer> <leader>R :w<CR>:!gcc -o main *.c -I. && ./main<CR>
-        \| noremap <buffer> <leader>r :w<CR>:!gcc -o main % && ./main<CR>
-augroup END
-
-augroup cpp
-    autocmd!
-    autocmd FileType cpp setlocal textwidth=85
-        \| noremap <buffer> <leader>r :w<CR>:!g++ -o main % && ./main<CR>
-augroup END
-
-augroup golang
-    autocmd!
-    autocmd FileType go setlocal noexpandtab textwidth=80
-                \| iabbrev ppr fmt.Printf("%#v\n",)<Left>
-                \| noremap <buffer> <leader>t :GoTest!<CR>
-                \| noremap <buffer> <leader>r :GoRun<CR>
-                \| noremap <buffer> <leader>b :GoBuild<CR>
-augroup END
-
-augroup rust
-    autocmd!
-    autocmd FileType rust setlocal textwidth=80
-                \| noremap <buffer> <leader>r :Cargo run<CR>
-                \| noremap <buffer> <leader>t :belowright :RustTest<CR>
-                \| noremap <buffer> <leader>T :belowright :RustTest!<CR>
-                \| noremap <buffer> <leader>H :belowright :Cargo clippy<CR>
-augroup END
-
-augroup dafny
-    autocmd!
-    autocmd FileType dafny setlocal textwidth=80
-                \| noremap <buffer> <leader>b :!dafny /out:main.exe %<CR>
-                \| noremap <buffer> <leader>r :!mono main.exe<CR>
-augroup END
-
-augroup javascript
-    autocmd!
-    autocmd FileType javascript setlocal textwidth=80 tabstop=2 shiftwidth=2
-                \| iabbrev <buffer> cl console.log
-augroup END
-
-augroup python
-    autocmd!
-    autocmd FileType python setlocal textwidth=80 tabstop=4 shiftwidth=4
-                \| noremap <buffer> <leader>r :w<CR>:!python3 %<CR>
-augroup END
-
-augroup markdown
-    autocmd!
-    autocmd FileType markdown setlocal spell textwidth=80 formatoptions+=t
-augroup END
-
-augroup tex
-    autocmd!
-    autocmd FileType tex setlocal spell textwidth=80 formatoptions+=t
-        \| noremap <buffer> <leader>b :w<CR>:!pdflatex %<CR>
-augroup END
-
 augroup textwidth_per_filetype
     autocmd!
     autocmd FileType vim             setlocal textwidth=150
@@ -80,7 +19,43 @@ augroup textwidth_per_filetype
     autocmd FileType scss            setlocal textwidth=150 tabstop=2 shiftwidth=2
     autocmd FileType html.handlebars setlocal textwidth=150 tabstop=2 shiftwidth=2
     autocmd FileType ruby            setlocal textwidth=150 tabstop=2 shiftwidth=2
+    autocmd FileType cpp             setlocal textwidth=80  tabstop=2 shiftwidth=2
     autocmd FileType dockerfile      setlocal textwidth=80  noexpandtab
+    autocmd FileType rust            setlocal textwidth=99
+augroup END
+
+" LSP Support
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+
+    if exists('+tagfunc')
+        setlocal tagfunc=lsp#tagfunc
+    endif
+
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    nmap <buffer> <leader>g :LspDocumentDiagnostics<CR>
+    nmap <buffer> <leader>r <plug>(lsp-rename)
+    nmap <buffer> <leader>l <plug>(lsp-code-lens)
+    nmap <buffer> <leader>; <plug>(lsp-code-action)
+    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
+    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
+
+    let g:lsp_format_sync_timeout = 1000
+    autocmd! BufWritePre * call execute('LspDocumentFormatSync')
+endfunction
+
+augroup lsp_install
+    autocmd!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
 " vim: ft=vim
